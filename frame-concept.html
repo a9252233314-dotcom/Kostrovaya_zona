@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Костровая зона — эскиз каркаса</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9eef2;color:#243447;font-family:Arial,sans-serif}header{max-width:1400px;margin:auto;padding:24px 24px 14px}h1{font-size:26px;margin:0 0 10px}p{line-height:1.5;margin:0 0 14px}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}button,a{font:inherit;border:1px solid #bccbd5;border-radius:8px;background:white;color:#243447;padding:10px 16px;text-decoration:none;cursor:pointer}button:hover,a:hover{background:#f1f6fa}.viewport{overflow:auto;margin:0 16px 24px;background:#f4f6f8;border:1px solid #cfdae2;border-radius:12px}#drawing{width:100%;min-width:700px;margin:auto}#drawing svg{width:100%;height:auto;display:block}.note{max-width:1400px;margin:0 auto;padding:0 24px 24px;color:#526777}@media print{header,.note{display:none}.viewport{border:0;margin:0;overflow:visible}#drawing{min-width:0;width:100%!important}}
+</style>
+</head>
+<body>
+<header><h1>Костровая зона · каркас 3 × 3 м</h1><p><a href="frame-overview.html">Текущая общая модель и ведомость деталей →</a></p><p>Ниже сохранён первоначальный эскиз крыши. Текущий предварительный уклон 45° показан в общей модели.</p><p><a href="base-assembly.html">Открыть нижние узлы и основания стоек →</a></p><p><a href="roof-assembly.html">Открыть схему сборки двускатной крыши →</a></p><p><a href="corner-assembly.html">Открыть объёмную схему сборки угла →</a></p><p>Первый эскиз: вид сверху и вид со стороны входа. Оранжевым отмечены соединительные узлы.</p><div class="tools"><button type="button" onclick="zoom(-0.25)">− Уменьшить</button><button type="button" onclick="zoom(0.25)">+ Увеличить</button><button type="button" onclick="resetZoom()">По ширине</button><button type="button" onclick="window.print()">Печать / PDF</button><a href="frame-concept.svg" download>Скачать SVG</a></div></header>
+<main class="viewport"><div id="drawing"><svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+<rect width="1400" height="920" fill="#f4f6f8"/>
+<style>text{font-family:Arial,sans-serif;fill:#243447} .title{font-size:30px;font-weight:bold}.h{font-size:23px;font-weight:bold}.t{font-size:18px}.small{font-size:16px}.steel{stroke:#304b60;stroke-width:9;fill:none;stroke-linejoin:round}.thin{stroke:#78909c;stroke-width:2;fill:none}.dim{stroke:#607d8b;stroke-width:1.5;fill:none}.node{fill:#ed9144;stroke:#fff;stroke-width:2}.draft{stroke:#78909c;stroke-width:2;stroke-dasharray:8 6;fill:none}</style>
+<text x="55" y="55" class="title">Костровая зона · концепция каркаса 01</text>
+<text x="55" y="88" class="t">Размеры в мм. Эскиз для обсуждения — не рабочий чертёж.</text>
+<text x="95" y="145" class="h">Вид сверху</text>
+<!-- plan: 3000 square, entrance at bottom -->
+<path d="M130 550V220H460V550" class="steel"/>
+<path d="M130 550H460" class="draft"/>
+<path d="M97 190H493V583H97Z" class="draft"/>
+<path d="M295 190V583" class="draft"/>
+<rect x="122" y="212" width="16" height="16" class="node"/><rect x="452" y="212" width="16" height="16" class="node"/>
+<rect x="122" y="542" width="16" height="16" class="node"/><rect x="452" y="542" width="16" height="16" class="node"/>
+<rect x="251" y="341" width="88" height="88" rx="10" class="draft"/>
+<text x="257" y="377" class="small">Место</text><text x="253" y="400" class="small">очага*</text>
+<path d="M130 175V155M460 175V155M130 165H460" class="dim"/>
+<text x="272" y="157" class="t">3000</text>
+<path d="M80 220H60M80 550H60M70 220V550" class="dim"/>
+<text x="48" y="410" class="t" transform="rotate(-90 48 410)">3000</text>
+<text x="207" y="620" class="h">ВХОД БЕЗ ПОРОГА</text>
+<text x="115" y="658" class="small">Сплошная линия — нижняя обвязка.</text>
+<text x="115" y="682" class="small">Пунктир — проекция крыши и её конёк.</text>
+<text x="115" y="706" class="small">* Габариты очага пока не определены.</text>
+<!-- front gable -->
+<text x="715" y="145" class="h">Вид спереди · со стороны входа</text>
+<path d="M765 550V319H1095V550M732 338L930 220L1128 338" class="steel"/>
+<path d="M765 319L930 220L1095 319" class="thin"/>
+<path d="M710 550H1155" class="thin"/>
+<rect x="757" y="311" width="16" height="16" class="node"/><rect x="1087" y="311" width="16" height="16" class="node"/>
+<circle cx="930" cy="220" r="8" class="node"/>
+<rect x="757" y="542" width="16" height="16" class="node"/><rect x="1087" y="542" width="16" height="16" class="node"/>
+<path d="M765 585V605M1095 585V605M765 595H1095" class="dim"/>
+<text x="908" y="587" class="t">3000</text>
+<path d="M1160 319H1180M1160 550H1180M1170 319V550" class="dim"/>
+<text x="1194" y="420" class="t">2200*</text><text x="1194" y="446" class="small">в свету</text>
+<text x="785" y="195" class="small">Уклон около 31° — только для эскиза*</text>
+<text x="725" y="650" class="small">* Принято для модели: проход 2200, свесы 300.</text>
+<text x="725" y="676" class="small">Высота конька ориентировочно 3150 от площадки;</text>
+<text x="725" y="700" class="small">уточняется после выбора узлов и сечений.</text>
+<path d="M55 745H1345" class="thin"/>
+<text x="55" y="780" class="t">Стойки и обвязка: 40 × 40 × 2. Крыша: предварительно 15 × 15 × 1, лист оцинкованный 0,3.</text>
+<text x="55" y="812" class="t">Оранжевым — положения соединительных узлов. Трубы надеваются на вставки и крепятся болтами.</text>
+<text x="55" y="844" class="t">Раскосы, прогоны крыши, болты, вставки и опоры предстоит проработать; на эскизе они не показаны.</text>
+<text x="55" y="876" class="t">Сечения, нагрузки, крепление покрытия и основания требуют проверки до изготовления.</text>
+</svg>
+</div></main>
+<section style="max-width:1368px;margin:24px auto;padding:24px;background:white;border-radius:12px">
+<h2>Верхний угловой соединитель · принцип сборки</h2>
+<p>Условный вид в пространстве. Оранжевое — единый сварной узел со вставками. Синие трубы надеваются на вставки до упора. Пунктир показывает направление сборки.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 660" style="display:block;width:100%;height:auto" role="img" aria-label="Схема углового соединителя со вставками под стойку, две перекладины и скат крыши">
+<defs><marker id="assemblyArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#8799a6"/></marker></defs>
+<rect width="1100" height="660" rx="12" fill="#f4f6f8"/>
+<g fill="none" stroke-linejoin="round">
+<path d="M465 335L305 335M465 335L570 425M465 335V475M465 335L580 205" stroke="#df8a40" stroke-width="30"/>
+<path d="M465 335L305 335M465 335L570 425M465 335V475M465 335L580 205" stroke="#f4b77c" stroke-width="19"/>
+<path d="M110 335H260M610 460L745 575M465 525V625M620 160L715 52" stroke="#304b60" stroke-width="42"/>
+<path d="M110 335H260M610 460L745 575M465 525V625M620 160L715 52" stroke="#55758c" stroke-width="27"/>
+<g stroke="#8799a6" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#assemblyArrow)"><path d="M265 335H295"/><path d="M605 455L578 432"/><path d="M465 520V485"/><path d="M612 169L586 198"/></g>
+<g stroke="#243447" stroke-width="3"><circle cx="351" cy="335" r="6"/><circle cx="528" cy="389" r="6"/><circle cx="465" cy="428" r="6"/><circle cx="544" cy="246" r="6"/></g>
+<path d="M382 303L350 260H135M493 440L760 390H1000M539 287L760 245H1000" stroke="#8799a6" stroke-width="2"/>
+</g>
+<g font-family="Arial,sans-serif" fill="#243447" font-size="20">
+<text x="85" y="228">Обвязка 40 × 40 × 2</text>
+<text x="765" y="585">Обвязка 40 × 40 × 2</text>
+<text x="490" y="610">Стойка 40 × 40 × 2</text>
+<text x="745" y="82">Элемент ската*</text>
+<text x="745" y="110" font-size="17">15 × 15 × 1 — предварительно</text>
+<text x="755" y="226">Отверстия под крепёж</text>
+<text x="755" y="370">Вставка внутрь стойки</text>
+<text x="80" y="70" font-size="24" font-weight="bold">Детали раздвинуты для наглядности</text>
+<text x="80" y="105" font-size="18">Масштаб и пропорции условные</text>
+</g>
+</svg>
+<p><strong>Как собирается:</strong> узел приварен на производстве; на его вставки надеваются отдельные трубы. Совмещённые отверстия позволяют зафиксировать каждую трубу болтом с гайкой. Кружки на схеме показывают только принцип — количество и расположение болтов ещё не назначены.</p>
+<p><strong>Выбраны вставки 35 × 35 × 2 мм под трубы 40 × 40 × 2 мм.</strong> Посадку проверяем на образцах с покрытием. Предстоит проверить прочность и подобрать длину вставок, зазор под покрытие, упоры, сварные швы, отверстия и крепёж. Внутренний шов и скругления трубы проверяются на образце. При затяжке нужно предусмотреть защиту стенок трубы от смятия.</p>
+<p><strong>* Крепление ската:</strong> небольшое сечение 15 × 15 × 1 требует отдельной проработки. Возможность вставки и сквозного болта пока не подтверждена; в этом месте может потребоваться другое крепление или сечение. Усиления узла на схеме не показаны.</p>
+</section><p class="note">Предварительная концепция. Уклон и свесы приняты для обсуждения. Сечения, раскосы, соединения и крепления нужно проверить до изготовления.</p>
+<script>let scale=1;function zoom(delta){scale=Math.min(3,Math.max(0.5,scale+delta));document.getElementById('drawing').style.width=(scale*100)+'%'}function resetZoom(){scale=1;document.getElementById('drawing').style.width='100%'}</script>
+</body></html>
+
+
+
+
+
+

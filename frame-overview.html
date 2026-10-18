@@ -1,0 +1,68 @@
+﻿<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Костровая зона 3 × 3 — сводная концепция</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#edf1f5;color:#203447;font:17px Arial,sans-serif}main{max-width:1250px;margin:auto;padding:24px}h1{font-size:30px}h2{font-size:23px}p{line-height:1.55}section{background:white;border-radius:14px;padding:24px;margin:20px 0}nav{display:flex;gap:10px;flex-wrap:wrap}a,button{display:inline-block;background:white;border:1px solid #bdcbd5;border-radius:8px;padding:10px 14px;color:#244b6b;font:inherit;text-decoration:none;cursor:pointer}svg{width:100%;height:auto;display:block}table{border-collapse:collapse;width:100%;font-size:16px}td,th{text-align:left;padding:13px 10px;border-bottom:1px solid #d8e1e8;vertical-align:top}th{background:#eef3f7}.scroll{overflow:auto}.note{background:#fff0d5;padding:18px;border-radius:10px}.facts{display:flex;gap:12px;flex-wrap:wrap}.fact{background:white;border-radius:10px;padding:16px;flex:1;min-width:190px}.fact strong{display:block;font-size:23px;margin-bottom:7px}@media print{nav,button{display:none}section{break-inside:avoid}body{background:white}}</style>
+<main><h1>Костровая зона 3 × 3 м</h1><p>Сводная концепция сборно-разборного каркаса. Основные трубы надеваются на вставки сварных узлов и закрепляются болтами; крыша собирается через уголки и накладные пластины.</p>
+<nav><a href="frame-3d.html">Вращаемая модель с людьми →</a><a href="seating-layout.html">Планировка до 6 человек</a><a href="corner-assembly.html">Верхний угол</a><a href="roof-assembly.html">Крыша и крепления</a><a href="base-assembly.html">Нижние узлы</a><button onclick="window.print()">Печать / PDF</button></nav>
+<div class="facts" style="margin-top:20px"><div class="fact"><strong>3000 × 3000 мм</strong>по осям стоек</div><div class="fact"><strong>45°</strong>предварительный уклон крыши</div><div class="fact"><strong>40 × 40 × 2</strong>стойки и обвязка</div><div class="fact"><strong>35 × 35 × 2</strong>вставки основных узлов</div></div>
+<p class="note"><strong>Как читать модель:</strong> она объединяет расположение деталей. Внутренности соединителей и мелкий крепёж показаны на отдельных страницах. Целевое число мест — до 6. Условная расстановка мебели и очага показана на странице планировки. Реальный очаг, пространство для людей и вытяжка ещё не проработаны.</p>
+<section id="bracing-layout"><h2>Общий вид каркаса · крыша 45°</h2>
+<p>Включай группы отдельно. Это схема расположения элементов: количество промежуточных опор, сечения, крепления и необходимость каждой связи ещё определяются проверкой каркаса.</p>
+<div><button id="toggle-purlins" onclick="toggleBracing('purlins')">Перемычки крыши: ВКЛ</button><button id="toggle-knees" onclick="toggleBracing('knees')">Угловые раскосы: ВКЛ</button><button id="toggle-ties" onclick="toggleBracing('ties')">Связи скатов: ВЫКЛ</button></div>
+<svg id="bracing-model" viewBox="0 0 1100 800" role="img" aria-label="Каркас с переключаемыми перемычками и раскосами"></svg>
+<p><strong>Фиолетовые линии — продольные опоры покрытия.</strong> Они проходят от одной торцевой рамы к другой: по карнизам, по коньку и между ними. Показанный шаг условный. Плоский лист 0,3 мм требует отдельной проверки опирания, прогиба и креплений; изображённые линии ещё не подтверждают достаточность опор.</p>
+<p><strong>Оранжевые линии — короткие раскосы в верхних углах.</strong> Предлагается рассмотреть их в двух направлениях у каждой стойки. Крепления разборные. Раскосы занимают часть верхних углов проёма: высоту прохода 2,1–2,2 м нужно проверить по всей требуемой ширине входа, а не только по середине. При необходимости изменим высоту обвязки или схему раскрепления.</p>
+<p><strong>Красный пунктир — вариант диагональных связей в плоскостях скатов.</strong> Показаны отдельно для обсуждения, по умолчанию скрыты. Вид связей и их крепления ещё не выбраны. Их положение нужно согласовать с вытяжкой и дымоходом, чтобы не пересечь будущий проём.</p>
+<p><strong>Вход — открытая сторона без нижней обвязки.</strong> Слева, справа и сзади нижняя обвязка показана серым. Продольные опоры покрытия и угловые раскосы не заменяют проверку устойчивости всего каркаса и креплений к основанию.</p>
+</section>
+<script>
+const braceState={purlins:true,knees:true,ties:false};
+function toggleBracing(key){braceState[key]=!braceState[key];renderBracing()}
+function renderBracing(){
+const s=document.getElementById('bracing-model'),ns='http://www.w3.org/2000/svg';s.innerHTML='';
+function make(tag,attrs){const e=document.createElementNS(ns,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);s.appendChild(e);return e}
+function project(v){return [550+(v[0]-v[1])*.091,430+(v[0]+v[1])*.047-v[2]*.097]}
+function edge(a,b,color,width=5,dash=''){const u=project(a),v=project(b);make('line',{x1:u[0],y1:u[1],x2:v[0],y2:v[1],stroke:color,'stroke-width':width,'stroke-linecap':'round','stroke-dasharray':dash})}
+function label(x,y,t,size=20){const e=make('text',{x,y,fill:'#203447','font-family':'Arial','font-size':size});e.textContent=t}
+make('rect',{width:1100,height:800,rx:10,fill:'#f4f6f8'});
+const h=2300,ridge=h+1500;
+for(const x of [0,3000])for(const y of [0,3000])edge([x,y,0],[x,y,h],'#304b60',7);
+for(const y of [0,3000])edge([0,y,h],[3000,y,h],'#304b60',7);
+for(const x of [0,3000])edge([x,0,h],[x,3000,h],'#304b60',7);
+// Entrance is the front edge y=3000; lower ring is absent there.
+for(const x of [0,3000])edge([x,0,0],[x,3000,0],'#a6b6c2',5);
+edge([0,0,0],[3000,0,0],'#a6b6c2',5);
+for(const y of [0,3000]){edge([-300,y,h-300],[1500,y,ridge],'#298f8b',6);edge([1500,y,ridge],[3300,y,h-300],'#298f8b',6)}
+edge([1500,-300,ridge],[1500,3300,ridge],'#8a63ae',6);
+if(braceState.purlins){for(const x of [-300,600,2400,3300]){const z=h+1500-Math.abs(x-1500);edge([x,-300,z],[x,3300,z],'#8a63ae',5)}}
+if(braceState.knees){for(const x of [0,3000])for(const y of [0,3000]){const dx=x===0?430:-430,dy=y===0?430:-430;edge([x,y,h-430],[x+dx,y,h],'#e58b36',6);edge([x,y,h-430],[x,y+dy,h],'#e58b36',6)}}
+if(braceState.ties){for(const x of [0,3000]){edge([x,0,h],[1500,3000,ridge],'#b94747',3,'9 7');edge([x,3000,h],[1500,0,ridge],'#b94747',3,'9 7')}}
+label(35,35,'Схема размещения · размеры раскосов условные',23);
+label(35,68,'Крепёж, опорные уголки, лист и дымоход скрыты для наглядности.',18);
+label(565,775,'ВХОД · нижней трубы нет',22);
+const names={purlins:'Перемычки крыши',knees:'Угловые раскосы',ties:'Связи скатов'};for(const key in names){const b=document.getElementById('toggle-'+key);b.textContent=names[key]+': '+(braceState[key]?'ВКЛ':'ВЫКЛ');b.style.background=braceState[key]?'#e2ecf4':'white';b.setAttribute('aria-pressed',String(braceState[key]))}
+}
+renderBracing();
+</script>
+<section><h2>Принятые решения и открытые размеры</h2>
+<p><strong>Верх:</strong> четыре сварных угловых узла с центральным корпусом и вставками. <strong>Низ:</strong> четыре опоры стоек с пластинами; нижняя обвязка по трём сторонам, проходные гильзы предварительно оставлены в концепции. Их размер ещё не подобран.</p>
+<p><strong>Крыша:</strong> два торцевых треугольника; сверху коньковая труба и оцинкованная планка. У карнизов предварительно выбраны покупные уголки 45° для профиля 2020, основание по фото 59 × 22 мм. Площадка для них ещё не разработана. У конька — по две накладки в форме ∧ на болтах; накладки можно вырезать или сварить из частей в цеху.</p>
+<p><strong>Высота:</strong> цель — чистый проход 2100–2200 мм, с учётом выступающих раскосов. На объёмной схеме отметка обвязки условная: это не утверждённая длина стойки. При опорах скатов около 2200–2300 мм конёк будет примерно на отметке 3700–3800 мм.</p>
+<p><strong>Свесы:</strong> предварительно по 300 мм. При одинаковых свесах по четырём сторонам габарит проекции крыши около 3600 × 3600 мм. Сечения 15 × 15 × 1 для крыши и лист 0,3 мм ещё требуют проверки.</p></section>
+<section><h2>Предварительная ведомость · количество по текущей схеме</h2><div class="scroll"><table><thead><tr><th>Деталь</th><th>Количество</th><th>Профиль / состояние</th></tr></thead><tbody>
+<tr><td>Угловые стойки</td><td>4</td><td>40 × 40 × 2; длина после проверки прохода и опор</td></tr>
+<tr><td>Перекладины верхней обвязки</td><td>4</td><td>40 × 40 × 2; резка с учётом корпусов узлов</td></tr>
+<tr><td>Перекладины нижней обвязки</td><td>3</td><td>40 × 40 × 2; длины после выбора гильз</td></tr>
+<tr><td>Верхние угловые узлы</td><td>4 сборки</td><td>Корпус 40 × 40 × 2 и вставки 35 × 35 × 2; детали не рассчитаны</td></tr>
+<tr><td>Опоры стоек</td><td>4 сборки</td><td>Пластина и вставка 35 × 35 × 2; размеры и крепления открыты</td></tr>
+<tr><td>Нижние проходные соединители</td><td>4 сборки</td><td>2 с одной боковой вставкой и 2 с двумя; гильза не подобрана</td></tr>
+<tr><td>Наклонные элементы торцевых рам</td><td>4</td><td>15 × 15 × 1 предварительно; длины после деталировки</td></tr>
+<tr><td>Коньковая труба</td><td>1</td><td>Сечение не назначено; пролёт между торцевыми рамами около 3 м</td></tr>
+<tr><td>Покупные уголки опор скатов</td><td>4 места крепления</td><td>45°; число уголков на место и совместимость ещё проверяются</td></tr>
+<tr><td>Коньковые накладки ∧</td><td>4</td><td>По 2 на торец; материал и размеры не назначены</td></tr>
+<tr><td>Крепления концов коньковой трубы</td><td>2 места</td><td>Болтовая компоновка ещё не детализирована</td></tr>
+<tr><td>Прогоны под лист, раскосы и связи</td><td>Не назначено</td><td>На модели показаны возможные положения</td></tr>
+<tr><td>Листы, коньковая планка, метизы, анкеры</td><td>Не назначено</td><td>После проверки опирания листа, узлов и основания</td></tr>
+</tbody></table></div><p>Количество относится к данной компоновке и может измениться после проверки нагрузок. Это не закупочная спецификация и не карта раскроя: длины перекладин нельзя автоматически принимать равными 3000 мм между осями стоек.</p></section>
+<section><h2>Что требуется до изготовления</h2><p>Согласовать проход с раскосами и высоту нижней обвязки; подобрать гильзы; определить место очага и проход вытяжки. Затем проверить пролёты крыши, сечения, крепления, снеговые и ветровые нагрузки для заявленных условий применения. По результатам назначить длины деталей, швы, отверстия, болты, опорные пластины и анкеры.</p><p>Проверенная посадка пары труб подтверждает возможность их соединить, но не несущую способность узла. Уклон 45° сам по себе не исключает снеговую нагрузку.</p></section>
+</main></html>
+
+

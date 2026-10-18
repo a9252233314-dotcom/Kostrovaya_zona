@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+<rect width="1400" height="920" fill="#f4f6f8"/>
+<style>text{font-family:Arial,sans-serif;fill:#243447} .title{font-size:30px;font-weight:bold}.h{font-size:23px;font-weight:bold}.t{font-size:18px}.small{font-size:16px}.steel{stroke:#304b60;stroke-width:9;fill:none;stroke-linejoin:round}.thin{stroke:#78909c;stroke-width:2;fill:none}.dim{stroke:#607d8b;stroke-width:1.5;fill:none}.node{fill:#ed9144;stroke:#fff;stroke-width:2}.draft{stroke:#78909c;stroke-width:2;stroke-dasharray:8 6;fill:none}</style>
+<text x="55" y="55" class="title">Костровая зона · концепция каркаса 01</text>
+<text x="55" y="88" class="t">Размеры в мм. Эскиз для обсуждения — не рабочий чертёж.</text>
+<text x="95" y="145" class="h">Вид сверху</text>
+<!-- plan: 3000 square, entrance at bottom -->
+<path d="M130 550V220H460V550" class="steel"/>
+<path d="M130 550H460" class="draft"/>
+<path d="M97 190H493V583H97Z" class="draft"/>
+<path d="M295 190V583" class="draft"/>
+<rect x="122" y="212" width="16" height="16" class="node"/><rect x="452" y="212" width="16" height="16" class="node"/>
+<rect x="122" y="542" width="16" height="16" class="node"/><rect x="452" y="542" width="16" height="16" class="node"/>
+<rect x="251" y="341" width="88" height="88" rx="10" class="draft"/>
+<text x="257" y="377" class="small">Место</text><text x="253" y="400" class="small">очага*</text>
+<path d="M130 175V155M460 175V155M130 165H460" class="dim"/>
+<text x="272" y="157" class="t">3000</text>
+<path d="M80 220H60M80 550H60M70 220V550" class="dim"/>
+<text x="48" y="410" class="t" transform="rotate(-90 48 410)">3000</text>
+<text x="207" y="620" class="h">ВХОД БЕЗ ПОРОГА</text>
+<text x="115" y="658" class="small">Сплошная линия — нижняя обвязка.</text>
+<text x="115" y="682" class="small">Пунктир — проекция крыши и её конёк.</text>
+<text x="115" y="706" class="small">* Габариты очага пока не определены.</text>
+<!-- front gable -->
+<text x="715" y="145" class="h">Вид спереди · со стороны входа</text>
+<path d="M765 550V319H1095V550M732 338L930 220L1128 338" class="steel"/>
+<path d="M765 319L930 220L1095 319" class="thin"/>
+<path d="M710 550H1155" class="thin"/>
+<rect x="757" y="311" width="16" height="16" class="node"/><rect x="1087" y="311" width="16" height="16" class="node"/>
+<circle cx="930" cy="220" r="8" class="node"/>
+<rect x="757" y="542" width="16" height="16" class="node"/><rect x="1087" y="542" width="16" height="16" class="node"/>
+<path d="M765 585V605M1095 585V605M765 595H1095" class="dim"/>
+<text x="908" y="587" class="t">3000</text>
+<path d="M1160 319H1180M1160 550H1180M1170 319V550" class="dim"/>
+<text x="1194" y="420" class="t">2200*</text><text x="1194" y="446" class="small">в свету</text>
+<text x="785" y="195" class="small">Уклон около 31° — только для эскиза*</text>
+<text x="725" y="650" class="small">* Принято для модели: проход 2200, свесы 300.</text>
+<text x="725" y="676" class="small">Высота конька ориентировочно 3150 от площадки;</text>
+<text x="725" y="700" class="small">уточняется после выбора узлов и сечений.</text>
+<path d="M55 745H1345" class="thin"/>
+<text x="55" y="780" class="t">Стойки и обвязка: 40 × 40 × 2. Крыша: предварительно 15 × 15 × 1, лист оцинкованный 0,3.</text>
+<text x="55" y="812" class="t">Оранжевым — положения соединительных узлов. Трубы надеваются на вставки и крепятся болтами.</text>
+<text x="55" y="844" class="t">Раскосы, прогоны крыши, болты, вставки и опоры предстоит проработать; на эскизе они не показаны.</text>
+<text x="55" y="876" class="t">Сечения, нагрузки, крепление покрытия и основания требуют проверки до изготовления.</text>
+</svg>

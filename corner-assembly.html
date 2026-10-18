@@ -1,0 +1,71 @@
+﻿<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Как собирается угол каркаса</title>
+<style>*{box-sizing:border-box}body{font-family:Arial,sans-serif;margin:0;background:#edf1f5;color:#203447}main{max-width:1300px;margin:auto;padding:24px}h1{font-size:28px}p{line-height:1.6}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}button{padding:12px 18px;border:1px solid #bbc8d2;border-radius:8px;background:white;font-size:17px;cursor:pointer}button.active{background:#203f59;color:white}.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}.card{background:white;border-radius:16px;padding:20px}svg{width:100%;height:auto}h2{font-size:20px;margin:0 0 10px}.legend span{display:inline-block;margin:8px 20px 8px 0}.chip{display:inline-block;width:16px;height:16px;margin-right:7px;vertical-align:middle}.note{background:#fff3d9;padding:16px;border-radius:10px}@media(max-width:850px){.grid{grid-template-columns:1fr}}</style>
+<main><h1>Вот как предлагается собирать верхний угол</h1><p>Выбраны вставки из профильной трубы <strong>35 × 35 × 2 мм</strong> под основные трубы <strong>40 × 40 × 2 мм</strong>. Здесь только <strong>стойка и две горизонтальные перекладины</strong>. Крышу покажем отдельно. Переключай виды, чтобы увидеть вставки внутри труб.</p>
+<div class="controls"><button id="b0" onclick="setMode(0)">1. Детали раздвинуты</button><button id="b1" onclick="setMode(1)">2. Трубы надеты</button><button id="b2" onclick="setMode(2)">3. Вставки внутри — просвет</button></div>
+<div class="legend"><span><i class="chip" style="background:#ee963d"></i>Сварной соединитель</span><span><i class="chip" style="background:#527c9d"></i>Отдельные трубы 40 × 40</span></div>
+<div class="grid"><section class="card"><h2 id="viewTitle"></h2><svg id="node" viewBox="0 0 700 590" aria-label="Объёмная схема соединителя"></svg><p id="caption"></p></section><section class="card"><h2>Этот угол в целом каркасе</h2><svg id="frame" viewBox="0 0 500 460" aria-label="Место соединителя в каркасе"></svg><p>Оранжевым выделен один верхний угол. Таких соединителей в верхней обвязке четыре — их ориентация должна соответствовать углам каркаса.</p><p><strong>Внутри соединителя:</strong> центральная сварная часть и три выступающие вставки. Две направлены горизонтально под 90°, третья — вниз.</p></section></div>
+<section class="card" style="margin-top:20px"><h2>Как собрать верхнюю обвязку без «запертой» последней трубы</h2><p><strong>①</strong> На земле собираем две противоположные стороны: труба + два угла, нижними вставками вверх. <strong>②</strong> Между ними укладываем две оставшиеся трубы. <strong>③</strong> Сдвигаем обе собранные стороны навстречу друг другу, одновременно вводя вставки в открытые концы труб. Получается квадрат. <strong>④</strong> Фиксируем соединения; готовую обвязку переворачиваем и устанавливаем на стойки с временной поддержкой.</p><p>Это объяснение геометрии сборки. Порядок безопасного подъёма и временного раскрепления определим после оценки массы и конструкции.</p></section>
+<section class="card" style="margin-top:20px">
+<h2>Подобранная пара труб · поперечный разрез</h2>
+<p>Вид прямо в торец соединения. Размеры номинальные, до покрытия. Скругления показаны условно; внутренний сварной шов не изображён.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" style="max-width:1000px" role="img" aria-label="Разрез: вставка 35 на 35 внутри трубы 40 на 40">
+<rect width="1000" height="510" rx="12" fill="#f4f6f8"/>
+<path d="M180 90 H500 V410 H180Z M196 106 V394 H484 V106Z" fill="#527c9d" fill-rule="evenodd"/>
+<path d="M200 110 H480 V390 H200Z M216 126 V374 H464 V126Z" fill="#ee963d" fill-rule="evenodd"/>
+<g stroke="#718797" stroke-width="2" fill="none"><path d="M180 65V40M500 65V40M180 50H500"/><path d="M200 420V450M480 420V450M200 440H480"/><path d="M488 200L570 155H620M472 280L570 275H620M486 350L570 385H620"/></g>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="22"><text x="272" y="36">40 мм снаружи</text><text x="267" y="477">35 мм снаружи</text><text x="640" y="150">Основная труба</text><text x="640" y="180">40 × 40 × 2 мм</text><text x="640" y="270">Вставка узла</text><text x="640" y="300">35 × 35 × 2 мм</text><text x="640" y="380">Зазор по плоским граням:</text><text x="640" y="410">номинально 0,5 мм на сторону</text><text x="251" y="250">Полость</text><text x="248" y="280">вставки</text></g>
+</svg>
+<h2>Следующий этап — пробное соединение</h2>
+<p><strong>1. Проверяем посадку.</strong> На коротких образцах проверяем вход трубы, влияние внутреннего шва, люфт и возможность повторной сборки. Затем повторяем с выбранным покрытием. Один удачный образец ещё не подтверждает взаимозаменяемость разных партий.</p>
+<p><strong>2. Прорабатываем упор.</strong> Основная труба должна доходить до определённого положения: его задаёт центральная часть соединителя либо отдельный упор. Это позволит повторяемо совмещать отверстия при сборке.</p>
+<p><strong>3. Назначаем длину вставки и крепёж.</strong> Они зависят от усилий в узле, схемы усилений, расстояний от отверстий до краёв и защиты стенок от смятия. Пока эти размеры не назначены — закупать болты и сверлить серийные детали рано.</p>
+<p><strong>Для первого образца проверяем именно посадку пары труб.</strong> Такая примерка не подтверждает несущую способность соединения или всего каркаса.</p>
+</section><section class="card" style="margin-top:20px">
+<h2>Предлагаемая сварная часть · центральный корпус</h2>
+<p>Посадка 35 × 35 × 2 внутрь 40 × 40 × 2 проверена пользователем. Следующее предлагаемое решение: центральный корпус из отрезка трубы 40 × 40 × 2, две боковые вставки 35 × 35 × 2 под прямым углом и нижняя вставка под стойку.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" role="img" aria-label="Центральный корпус сварного углового узла: вид сверху и сбоку">
+<rect width="1100" height="650" rx="12" fill="#f4f6f8"/>
+<g font-family="Arial,sans-serif" fill="#203447"><text x="65" y="50" font-size="25">Вид сверху · два направления обвязки</text><text x="635" y="50" font-size="25">Вид сбоку · вставка под стойку</text></g>
+<g stroke="#203447" stroke-width="2">
+<rect x="215" y="150" width="100" height="100" fill="#d66b25"/>
+<rect x="315" y="156" width="190" height="88" fill="#ee963d"/>
+<rect x="221" y="250" width="88" height="190" fill="#ee963d"/>
+<rect x="635" y="150" width="100" height="220" fill="#d66b25"/>
+<rect x="735" y="156" width="190" height="88" fill="#ee963d"/>
+<path d="M641 290H729V370H641Z" fill="#ee963d" stroke-dasharray="7 5"/>
+<rect x="641" y="370" width="88" height="160" fill="#ee963d"/>
+</g>
+<g stroke="#203447" stroke-width="2" fill="none"><path d="M352 250V285H315"/><path d="M245 180L170 105H65"/><path d="M400 190L465 105H525"/><path d="M665 325L800 310H980"/><path d="M690 470L800 470H980"/></g>
+<g stroke="#b72832" stroke-width="6"><path d="M315 158V242M223 250H307M735 158V242M642 370H728"/></g>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="20">
+<text x="65" y="96">Корпус 40 × 40 × 2</text><text x="370" y="96">Вставка 35 × 35 × 2</text><text x="364" y="288">90°</text><text x="65" y="480">Третья вставка направлена вниз —</text><text x="65" y="510">на виде сверху её не видно.</text>
+<text x="800" y="300">Часть нижней вставки</text><text x="800" y="333">входит внутрь корпуса</text><text x="800" y="460">На выступ надевается</text><text x="800" y="493">стойка 40 × 40 × 2</text>
+<text x="65" y="585" fill="#b72832">Красное — условные места сварки, не обозначение типа или размера шва.</text><text x="65" y="617">Пропорции условные. Длины корпуса, вставок и их заделки ещё не назначены.</text>
+</g></svg>
+<p><strong>Как работает упор:</strong> горизонтальные трубы своими торцами доходят до боковых граней центрального корпуса, стойка — до его нижнего торца. Сварные швы не должны мешать этой посадке: в деталировке нужно предусмотреть место под шов или отдельный упор. Просто сошлифовывать несущий шов ради посадки нельзя.</p>
+<p><strong>Что это даёт производству:</strong> один шаблон для взаимного положения вставок, повторяемый угол 90° и определённое положение каждой надеваемой трубы. При сварке нужно контролировать соосность и деформации, затем проверять узел сборочным шаблоном.</p>
+<p><strong>Что пока открыто:</strong> достаточность стенки корпуса 2 мм, усиление мест приварки боковых вставок, длины, швы и крепёж. Верх корпуса и крепление крыши прорабатываются совместно; защита от попадания воды также нужна. Эта схема — вариант компоновки для согласования, а не подтверждённое по прочности решение.</p>
+</section><p class="note"><strong>Это схема принципа, а не готовый узел для изготовления.</strong> Для вставок выбран профиль 35 × 35 × 2 мм. Его посадку нужно проверить на реальных образцах, в том числе после нанесения покрытия. Прочность вставок, их длина, центральная часть и упоры, швы, число болтов и отверстия ещё требуют проработки. Вставка должна входить внутрь трубы с учётом её шва и скруглений. Крепёж на рисунке условный.</p>
+</main><script>
+const ns='http://www.w3.org/2000/svg';let mode=0;
+function el(svg,tag,attrs){let e=document.createElementNS(ns,tag);for(let k in attrs)e.setAttribute(k,attrs[k]);svg.appendChild(e);return e}
+function project(p){return [345+(p[0]-p[1])*.79,250+(p[0]+p[1])*.36-p[2]]}
+function beam(svg,a,b,w,color,opacity=1){let axis=a.findIndex((v,i)=>v!==b[i]);let other=[0,1,2].filter(i=>i!==axis);let pts=[];for(let end of [a,b])for(let signs of [[-1,-1],[1,-1],[1,1],[-1,1]]){let p=[...end];other.forEach((ax,j)=>p[ax]+=signs[j]*w/2);pts.push(project(p))}let faces=[[0,1,2,3],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]];for(let f of faces)el(svg,'polygon',{points:f.map(i=>pts[i].join(',')).join(' '),fill:color,stroke:'#203447','stroke-width':1.4,opacity});}
+function label(svg,x,y,t){let e=el(svg,'text',{x,y,fill:'#203447','font-family':'Arial','font-size':19});e.textContent=t}
+function line(svg,a,b,color,width=4,dash=''){let p=project(a),q=project(b);el(svg,'line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:color,'stroke-width':width,'stroke-dasharray':dash})}
+function render(){let s=document.getElementById('node');s.innerHTML='';let gap=mode===0?90:0,alpha=mode===2?.24:1;
+// Internal welded connector: three orthogonal stubs, with a conceptual central body.
+beam(s,[0,0,-90],[0,0,0],23,'#ee963d');beam(s,[0,0,0],[90,0,0],23,'#ee963d');beam(s,[0,0,0],[0,90,0],23,'#ee963d');beam(s,[0,0,-15],[0,0,15],40,'#ee963d');
+beam(s,[0,0,-255-gap],[0,0,-25-gap],40,'#527c9d',alpha);
+beam(s,[25+gap,0,0],[270+gap,0,0],40,'#527c9d',alpha);beam(s,[0,25+gap,0],[0,270+gap,0],40,'#527c9d',alpha);
+if(mode===0){line(s,[95,0,0],[125,0,0],'#ee963d',4);line(s,[0,95,0],[0,125,0],'#ee963d',4);label(s,300,160,'Сварная центральная часть');label(s,60,425,'Перекладина');label(s,475,425,'Перекладина');label(s,390,560,'Стойка');label(s,270,205,'↙ вставки ↘');}
+else{for(let p of [[65,0,0],[0,65,0],[0,0,-65]]){let q=project(p);el(s,'circle',{cx:q[0],cy:q[1],r:6,fill:'#f1cf6a',stroke:'#203447','stroke-width':2})}label(s,62,414,'Перекладина');label(s,465,414,'Перекладина');label(s,385,540,'Стойка');label(s,60,100,mode===2?'Оранжевые вставки скрыты внутри труб':'Трубы надеты на вставки до упоров');}
+document.getElementById('viewTitle').textContent=['Детали перед соединением','Собранный угол','Тот же угол с прозрачными трубами'][mode];document.getElementById('caption').textContent=mode===0?'Открытый конец каждой синей трубы направлен к оранжевой вставке. Две перекладины образуют угол 90°, стойка подходит снизу.':mode===1?'Вставок снаружи почти не видно: их закрывают надетые трубы. Жёлтые точки условно обозначают крепёж через трубу и вставку.':'Прозрачность позволяет увидеть нахлёст трубы на вставку. Именно через этот участок проходит крепёж.';
+for(let i=0;i<3;i++)document.getElementById('b'+i).className=i===mode?'active':'';
+}
+function setMode(m){mode=m;render()}
+let f=document.getElementById('frame');function fp(p){return [250+(p[0]-p[1])*.63,235+(p[0]+p[1])*.25-p[2]*.75]};function fl(a,b,c,w){let p=fp(a),q=fp(b);el(f,'line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:c,'stroke-width':w,'stroke-linecap':'round'})}let corners=[[0,0],[230,0],[230,230],[0,230]];for(let i=0;i<4;i++){let a=corners[i],b=corners[(i+1)%4];fl([...a,0],[...a,220],'#527c9d',7);fl([...a,220],[...b,220],'#527c9d',7);if(i!==1)fl([...a,0],[...b,0],'#a5b9c7',5)}fl([0,0,175],[0,0,220],'#ee963d',10);fl([0,0,220],[55,0,220],'#ee963d',10);fl([0,0,220],[0,55,220],'#ee963d',10);label(f,45,40,'Выделенный верхний угол');render();
+</script></html>
+
+
+

@@ -1,0 +1,129 @@
+﻿<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Двускатная крыша — схема сборки</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#edf1f5;color:#203447;font:17px Arial,sans-serif}main{max-width:1250px;margin:auto;padding:24px}h1{font-size:28px}h2{font-size:22px}p{line-height:1.6}section{background:white;padding:22px;border-radius:14px;margin:20px 0}svg{display:block;width:100%;height:auto}button,a{display:inline-block;border:1px solid #bdcbd5;border-radius:7px;padding:10px 15px;background:white;color:#203447;font:inherit;cursor:pointer;text-decoration:none;margin:5px}.on{background:#203f59;color:white}.note{background:#fff1d7;padding:16px;border-radius:10px}.key span{display:inline-block;margin:8px 18px 8px 0}.key i{display:inline-block;width:16px;height:16px;vertical-align:middle;margin-right:6px}@media print{button,nav{display:none}}</style>
+<main><nav><a href="frame-concept.html">Общий каркас</a><a href="corner-assembly.html">Угловой узел</a></nav><h1>Двускатная крыша · предварительно 45°</h1><p class="note"><strong>Текущий вариант:</strong> опора ската на покупном усиленном уголке 45° для профиля 2020. По фото: основание 59 × 22 мм, отверстие 6,5 мм. Требуются проверка материала и прочности, разработка площадки крепления и проверка соединения с трубой 15 × 15 × 1. Седло в разделе 3 сохранено только как прежний вариант и сейчас не выбрано.</p><p>Две торцевые треугольные рамы соединяются коньком и продольными перемычками. Это компоновка для обсуждения, без назначения несущей способности.</p>
+<div class="key"><span><i style="background:#304b60"></i>Обвязка 40 × 40 × 2</span><span><i style="background:#298f8b"></i>Наклонные элементы</span><span><i style="background:#8a63ae"></i>Конёк и перемычки</span><span><i style="background:#eb953f"></i>Места разъёмных креплений</span></div>
+<section><h2>1. Крыша на каркасе</h2><button onclick="draw(false)">Только две рамы</button><button onclick="draw(true)">Добавить конёк и перемычки</button><svg id="roof" viewBox="0 0 1100 700" role="img" aria-label="Объёмная схема двускатной крыши на четырёх стойках"></svg><p>По одному промежуточному продольному элементу на каждом скате показано только для понимания. Их количество, шаг и сечение определяются после проверки покрытия и каркаса. Лист на схеме скрыт.</p></section>
+<section><h2>2. Торцевая рама · со стороны входа</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -150 1100 620" role="img" aria-label="Треугольная рама двускатной крыши">
+<rect width="1100" height="470" rx="10" fill="#f4f6f8"/>
+<g fill="none" stroke-linecap="round"><path d="M220 380V260H880V380M220 260H880" stroke="#304b60" stroke-width="10"/><path d="M154 326L550 -70L946 326" stroke="#298f8b" stroke-width="8"/><path d="M220 417H880M220 405V430M880 405V430" stroke="#7a8e9c" stroke-width="2"/></g>
+<g fill="#eb953f"><circle cx="220" cy="260" r="12"/><circle cx="880" cy="260" r="12"/><circle cx="550" cy="-70" r="12"/></g>
+<g fill="#203447" font-family="Arial,sans-serif" font-size="21"><text x="470" y="451">3000 по осям стоек</text><text x="35" y="346">Свес ≈300*</text><text x="832" y="346">Свес ≈300*</text><text x="610" y="-70">Коньковый узел</text><text x="370" y="305">Балка верхней обвязки</text><text x="45" y="50">Уклон 45°*</text><text x="45" y="82">Подъём 1500 мм*</text></g>
+</svg>
+<p>* По согласованию предварительно принят уклон 45°. При ширине 3000 мм подъём конька составляет 1500 мм от уровня опор скатов. Свесы пока 300 мм. Итоговая высота уточняется с учётом размеров деталей. При проходе 2200 мм конёк будет ориентировочно на высоте 3,7–3,8 м от площадки.</p></section>
+<section id="eave-detail"><h2>3. Прежний вариант седла · сейчас не выбран</h2>
+<p><strong>Предлагаемый вариант — небольшое седло на готовом угловом соединителе.</strong> Оно состоит из двух боковых пластин и наклонной опорной полки между ними. Седло сваривается в цеху вместе с угловым узлом; при сборке крыши труба ската укладывается сверху и фиксируется болтовым крепежом.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" role="img" aria-label="Детали седла для ската: боковой вид, торцевой разрез и сборка">
+<rect width="1200" height="850" rx="12" fill="#f4f6f8"/>
+<g font-family="Arial,sans-serif" fill="#203447"><text x="40" y="45" font-size="25">А. Вид сбоку · одна щека скрыта</text><text x="675" y="45" font-size="25">Б. Разрез поперёк ската</text></g>
+<!-- side: upward sloping bearing and cheek -->
+<rect x="235" y="253" width="110" height="155" fill="#304b60" stroke="#203447" stroke-width="2"/>
+<path d="M225 253H355V162L225 240Z" fill="#eb953f" opacity=".45" stroke="#203447" stroke-width="2"/>
+<path d="M100 303L470 81" fill="none" stroke="#298f8b" stroke-width="22"/>
+<path d="M225 241L350 166" stroke="#bd6c22" stroke-width="9"/>
+<circle cx="289" cy="190" r="8" fill="#f1cf6a" stroke="#203447" stroke-width="2"/>
+<g stroke="#718797" stroke-width="2" fill="none"><path d="M340 172L460 150H570M289 190L450 225H570M260 300L440 335H570"/></g>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="19"><text x="430" y="135">Наклонная полка</text><text x="440" y="247">Болт через щёки</text><text x="430" y="358">Корпус углового узла</text><text x="40" y="450">Скат продолжается вниз за опору — это свес.</text></g>
+<!-- transverse section: saddle and tube -->
+<rect x="755" y="170" width="18" height="150" fill="#eb953f" stroke="#203447" stroke-width="2"/>
+<rect x="873" y="170" width="18" height="150" fill="#eb953f" stroke="#203447" stroke-width="2"/>
+<rect x="773" y="286" width="100" height="16" fill="#bd6c22" stroke="#203447" stroke-width="2"/>
+<path d="M785 190H861V286H785Z M793 198V278H853V198Z" fill="#298f8b" fill-rule="evenodd" stroke="#203447" stroke-width="1"/>
+<path d="M730 232H915" stroke="#203447" stroke-width="9"/><rect x="724" y="216" width="15" height="32" fill="#667d8e"/><rect x="908" y="216" width="19" height="32" fill="#667d8e"/>
+<rect x="750" y="320" width="150" height="88" fill="#304b60"/>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="19"><text x="710" y="125">Щека · труба · щека</text><text x="685" y="450">Труба лежит на полке между щеками.</text></g>
+<path d="M40 485H1160" stroke="#cad5de"/>
+<g font-family="Arial,sans-serif" fill="#203447"><text x="40" y="530" font-size="25">В. Из чего изготовить седло</text></g>
+<path d="M90 705H260V600L90 702Z" fill="#eb953f" stroke="#203447" stroke-width="2"/>
+<path d="M320 705H490V600L320 702Z" fill="#eb953f" stroke="#203447" stroke-width="2"/>
+<path d="M620 690L790 588L845 620L675 722Z" fill="#bd6c22" stroke="#203447" stroke-width="2"/>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="20"><text x="85" y="755">Две одинаковые боковые пластины</text><text x="600" y="755">Одна опорная полка</text><text x="40" y="813">Угол полки соответствует уклону крыши. Размеры, число болтов и швы ещё не назначены.</text></g>
+</svg>
+<p><strong>Что приваривается на производстве:</strong> полка к боковым пластинам, седло — к корпусу углового соединителя. Сварной шов не должен мешать укладке трубы на полку. Форму щёк можно упростить при деталировке; наклонной должна быть именно опорная поверхность под скат.</p>
+<p><strong>Что делает покупатель:</strong> укладывает скат сверху между щеками до совмещения отверстий, вставляет крепёж и затягивает гайки. С торца трубу в закрытый карман проталкивать не нужно. Опорная полка воспринимает прижатие ската вниз; болтовое крепление и остальная конструкция должны удерживать его при других направлениях нагрузки.</p>
+<p><strong>Важно для компоновки:</strong> седло размещаем над корпусом так, чтобы оставался доступ к крепежу горизонтальной обвязки, а скат со свесом не задевал её. На схеме обвязка скрыта для ясности. У второй стороны крыши седло имеет зеркальный наклон.</p>
+<p><strong>Пока не назначены:</strong> толщина и высота щёк, размеры полки, швы, число и диаметр болтов. Для трубы 15 × 15 × 1 отдельно проверяем отверстия и смятие стенок; на разрезе возможная распорная втулка не показана. Один болт на рисунке не означает, что он обеспечит требуемую жёсткость.</p>
+<p><strong>У конька:</strong> остаётся согласованный принцип — две накладки в форме ∧ по сторонам труб, соединённые болтами. Накладки можно вырезать целиком или изготовить сваркой в цеху; покупатель использует только болтовые соединения.</p>
+</section>
+<section><h2>Порядок сборки крыши</h2><p>① На временно раскреплённом каркасе устанавливаем две торцевые рамы с временной поддержкой. ② Соединяем их продольными элементами. ③ Устанавливаем предусмотренные проектом связи, проверяем геометрию и затягиваем крепёж. ④ Монтируем покрытие по разработанной схеме. Это принцип последовательности; способ монтажа уточняется после определения массы и устойчивости деталей.</p></section>
+<section id="ridge-detail"><h2>4. Коньковый узел · без сварки, на накладных пластинах</h2>
+<p><strong>Исправлено по согласованию:</strong> приварных ушек и сварного конькового соединителя нет. Концы двух наклонных труб соединяются двумя плоскими фасонными накладками — спереди и сзади. Болты проходят через накладки и трубы. Пластины можно вырезать из листа без сварки.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 660" role="img" aria-label="Две накладные пластины соединяют трубы скатов болтами без сварки">
+<rect width="1100" height="660" rx="10" fill="#f4f6f8"/>
+<g font-family="Arial,sans-serif" fill="#203447"><text x="45" y="45" font-size="24">Вид с торца · накладки с двух сторон</text></g>
+<!-- Rear plate, tubes and transparent front plate -->
+<path d="M225 215L400 110L575 215L550 260L400 170L250 260Z" fill="#c58a45" stroke="#203447" stroke-width="2"/>
+<path d="M85 335L397 148M403 148L715 335" fill="none" stroke="#298f8b" stroke-width="28"/>
+<path d="M225 215L400 110L575 215L550 260L400 170L250 260Z" fill="#f2ac57" fill-opacity=".55" stroke="#203447" stroke-width="2"/>
+<g fill="#f1cf6a" stroke="#203447" stroke-width="2"><circle cx="270" cy="224" r="8"/><circle cx="335" cy="185" r="8"/><circle cx="465" cy="185" r="8"/><circle cx="530" cy="224" r="8"/></g>
+<g fill="none" stroke="#718797" stroke-width="2"><path d="M450 130L760 95H1010M530 224L760 230H1010"/></g>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="20"><text x="760" y="85">Две одинаковые накладки</text><text x="760" y="218">Болты через трубу</text><text x="45" y="385">Передняя накладка полупрозрачная, чтобы было видно трубы.</text><text x="45" y="425" font-size="24">Разрез одного крепления · вдоль оси болта</text></g>
+<!-- transverse tube section with two cheeks and internal sleeve -->
+<rect x="205" y="465" width="16" height="115" fill="#eb953f" stroke="#203447" stroke-width="2"/>
+<path d="M235 465H325V580H235Z M243 473V572H317V473Z" fill="#298f8b" fill-rule="evenodd" stroke="#203447" stroke-width="1"/>
+<rect x="243" y="505" width="74" height="9" fill="#a5bac6"/><rect x="243" y="532" width="74" height="9" fill="#a5bac6"/>
+<rect x="339" y="465" width="16" height="115" fill="#eb953f" stroke="#203447" stroke-width="2"/>
+<path d="M175 523H390" stroke="#203447" stroke-width="10"/><rect x="170" y="505" width="16" height="36" fill="#667d8e"/><rect x="380" y="505" width="20" height="36" fill="#667d8e"/>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="20"><text x="455" y="477">Оранжевое — накладки, зелёное — стенки трубы</text><text x="455" y="514">Внутри показана возможная распорная втулка</text><text x="455" y="551">Её необходимость и исполнение требуют проверки</text><text x="45" y="625">Количество болтов и размеры на схеме условные. Сечения и крепёж ещё не рассчитаны.</text></g>
+</svg>
+<p><strong>Как собирается:</strong> совмещаем подготовленные концы двух скатов, прикладываем накладки с обеих сторон, вставляем болты в совмещённые отверстия и затягиваем гайки. Накладки задают взаимное положение скатов. Число болтов, расстояния между ними и отступы от торцов определяем при деталировке.</p>
+<p><strong>Продольный конёк:</strong> предусматриваем отдельный болтовой кронштейн из гнутого листа или уголков, прикреплённый к пакету коньковых накладок. Продольная труба крепится к нему болтами. Сварка в коньковом узле не предусматривается; точная форма кронштейна ещё не разработана.</p>
+<p><strong>Тонкая труба:</strong> для 15 × 15 × 1 нельзя пока назначить диаметр отверстий и усилие затяжки. Проверяем ослабление сечения, смятие стенок и возможность установки распорных втулок; по результату может потребоваться большее сечение трубы или другое исполнение крепления.</p><h2>Коньковая планка · отдельная деталь покрытия</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 245" role="img" aria-label="Коньковая планка поверх двух кровельных листов">
+<rect width="1100" height="245" rx="10" fill="#f4f6f8"/>
+<path d="M165 195L450 50L735 195" fill="none" stroke="#879ba8" stroke-width="5"/>
+<path d="M345 93L450 39L555 93" fill="none" stroke="#365c79" stroke-width="9"/>
+<path d="M550 65H760" fill="none" stroke="#7a8e9c" stroke-width="2"/>
+<g font-family="Arial,sans-serif" fill="#203447" font-size="20"><text x="770" y="65">Гнутая оцинкованная планка</text><text x="315" y="225">Листы двух скатов · условный разрез</text></g>
+</svg>
+<p>Планка закрывает стык двух скатов и входит в базовую комплектацию вместе с коньковой трубой. Ширина полок, нахлёсты, крепления и решение по защите от задувания осадков определяются при проработке покрытия. Планка не заменяет несущую коньковую трубу.</p>
+</section><section id="bracing-layout"><h2>5. Перемычки и раскосы · предложение по расположению</h2>
+<p>Включай группы отдельно. Это схема расположения элементов: количество промежуточных опор, сечения, крепления и необходимость каждой связи ещё определяются проверкой каркаса.</p>
+<div><button id="toggle-purlins" onclick="toggleBracing('purlins')">Перемычки крыши: ВКЛ</button><button id="toggle-knees" onclick="toggleBracing('knees')">Угловые раскосы: ВКЛ</button><button id="toggle-ties" onclick="toggleBracing('ties')">Связи скатов: ВЫКЛ</button></div>
+<svg id="bracing-model" viewBox="0 0 1100 800" role="img" aria-label="Каркас с переключаемыми перемычками и раскосами"></svg>
+<p><strong>Фиолетовые линии — продольные опоры покрытия.</strong> Они проходят от одной торцевой рамы к другой: по карнизам, по коньку и между ними. Показанный шаг условный. Плоский лист 0,3 мм требует отдельной проверки опирания, прогиба и креплений; изображённые линии ещё не подтверждают достаточность опор.</p>
+<p><strong>Оранжевые линии — короткие раскосы в верхних углах.</strong> Предлагается рассмотреть их в двух направлениях у каждой стойки. Крепления разборные. Раскосы занимают часть верхних углов проёма: высоту прохода 2,1–2,2 м нужно проверить по всей требуемой ширине входа, а не только по середине. При необходимости изменим высоту обвязки или схему раскрепления.</p>
+<p><strong>Красный пунктир — вариант диагональных связей в плоскостях скатов.</strong> Показаны отдельно для обсуждения, по умолчанию скрыты. Вид связей и их крепления ещё не выбраны. Их положение нужно согласовать с вытяжкой и дымоходом, чтобы не пересечь будущий проём.</p>
+<p><strong>Вход — открытая сторона без нижней обвязки.</strong> Слева, справа и сзади нижняя обвязка показана серым. Продольные опоры покрытия и угловые раскосы не заменяют проверку устойчивости всего каркаса и креплений к основанию.</p>
+</section>
+<script>
+const braceState={purlins:true,knees:true,ties:false};
+function toggleBracing(key){braceState[key]=!braceState[key];renderBracing()}
+function renderBracing(){
+const s=document.getElementById('bracing-model'),ns='http://www.w3.org/2000/svg';s.innerHTML='';
+function make(tag,attrs){const e=document.createElementNS(ns,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);s.appendChild(e);return e}
+function project(v){return [550+(v[0]-v[1])*.091,430+(v[0]+v[1])*.047-v[2]*.097]}
+function edge(a,b,color,width=5,dash=''){const u=project(a),v=project(b);make('line',{x1:u[0],y1:u[1],x2:v[0],y2:v[1],stroke:color,'stroke-width':width,'stroke-linecap':'round','stroke-dasharray':dash})}
+function label(x,y,t,size=20){const e=make('text',{x,y,fill:'#203447','font-family':'Arial','font-size':size});e.textContent=t}
+make('rect',{width:1100,height:800,rx:10,fill:'#f4f6f8'});
+const h=2300,ridge=h+1500;
+for(const x of [0,3000])for(const y of [0,3000])edge([x,y,0],[x,y,h],'#304b60',7);
+for(const y of [0,3000])edge([0,y,h],[3000,y,h],'#304b60',7);
+for(const x of [0,3000])edge([x,0,h],[x,3000,h],'#304b60',7);
+// Entrance is the front edge y=3000; lower ring is absent there.
+for(const x of [0,3000])edge([x,0,0],[x,3000,0],'#a6b6c2',5);
+edge([0,0,0],[3000,0,0],'#a6b6c2',5);
+for(const y of [0,3000]){edge([-300,y,h-300],[1500,y,ridge],'#298f8b',6);edge([1500,y,ridge],[3300,y,h-300],'#298f8b',6)}
+edge([1500,-300,ridge],[1500,3300,ridge],'#8a63ae',6);
+if(braceState.purlins){for(const x of [-300,600,2400,3300]){const z=h+1500-Math.abs(x-1500);edge([x,-300,z],[x,3300,z],'#8a63ae',5)}}
+if(braceState.knees){for(const x of [0,3000])for(const y of [0,3000]){const dx=x===0?430:-430,dy=y===0?430:-430;edge([x,y,h-430],[x+dx,y,h],'#e58b36',6);edge([x,y,h-430],[x,y+dy,h],'#e58b36',6)}}
+if(braceState.ties){for(const x of [0,3000]){edge([x,0,h],[1500,3000,ridge],'#b94747',3,'9 7');edge([x,3000,h],[1500,0,ridge],'#b94747',3,'9 7')}}
+label(35,35,'Схема размещения · размеры раскосов условные',23);
+label(35,68,'Крепёж, опорные уголки, лист и дымоход скрыты для наглядности.',18);
+label(565,775,'ВХОД · нижней трубы нет',22);
+const names={purlins:'Перемычки крыши',knees:'Угловые раскосы',ties:'Связи скатов'};for(const key in names){const b=document.getElementById('toggle-'+key);b.textContent=names[key]+': '+(braceState[key]?'ВКЛ':'ВЫКЛ');b.style.background=braceState[key]?'#e2ecf4':'white';b.setAttribute('aria-pressed',String(braceState[key]))}
+}
+renderBracing();
+</script><p class="note"><strong>До изготовления:</strong> 15 × 15 × 1 остаётся предварительным сечением, а оцинковка 0,3 мм — предварительным покрытием. Пролёты, связи, пластины, болты и швы ещё не проверены на снег, ветер и монтажные нагрузки. Схемы не являются рабочими чертежами. Центральный очаг, вытяжка и проход дымохода пока не размещены — они могут изменить схему крыши.</p>
+</main>
+<script>
+const svg=document.getElementById('roof'),NS='http://www.w3.org/2000/svg';function add(tag,a){let e=document.createElementNS(NS,tag);for(let k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e}function p(x,y,z){return [550+(x-y)*.092,430+(x+y)*.043-z*.105]}function ln(a,b,c,w,d=''){let u=p(...a),v=p(...b);add('line',{x1:u[0],y1:u[1],x2:v[0],y2:v[1],stroke:c,'stroke-width':w,'stroke-linecap':'round','stroke-dasharray':d})}function txt(x,y,t){let e=add('text',{x,y,fill:'#203447','font-family':'Arial','font-size':21});e.textContent=t}function dot(a){let u=p(...a);add('circle',{cx:u[0],cy:u[1],r:7,fill:'#eb953f'})}function draw(all){svg.innerHTML='';add('rect',{width:1100,height:700,rx:10,fill:'#f4f6f8'});let top=2240;for(let x of [0,3000])for(let y of [0,3000])ln([x,y,0],[x,y,top],'#9aafbd',6);for(let y of [0,3000])ln([0,y,top],[3000,y,top],'#304b60',9);for(let x of [0,3000])ln([x,0,top],[x,3000,top],'#304b60',9);
+for(let y of [0,3000]){ln([-300,y,top-300],[1500,y,top+1500],'#298f8b',7);ln([1500,y,top+1500],[3300,y,top-300],'#298f8b',7);for(let x of [0,3000])dot([x,y,top]);dot([1500,y,top+1500])}
+if(all){ln([1500,-300,top+1500],[1500,3300,top+1500],'#8a63ae',7);for(let x of [750,2250])ln([x,-300,top+750],[x,3300,top+750],'#8a63ae',6)}txt(35,48,all?'Две торцевые рамы + продольные элементы':'Две торцевые рамы на верхней обвязке');txt(35,80,'Масштаб сечений условный. Связи и усиления пока не показаны.');txt(550,665,'Вход · без нижнего порога');}draw(true);
+</script></html>
+
+
+
+
+
+
